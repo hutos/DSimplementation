@@ -51,7 +51,7 @@ public interface ILinkedList {
      * 查找对应元素下标
      * @param o 数据
      */
-    public int indxeOf(Object o);
+    public int indexOf(Object o);
 
     /**
      * 输出所有元素

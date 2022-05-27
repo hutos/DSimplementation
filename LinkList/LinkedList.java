@@ -78,16 +78,39 @@ public class LinkedList implements ILinkedList{
 
     @Override
     public void addTail(Object o) {
-
+        Node node = new Node(o);
+        Node p = head;
+        // 遍历到链表的最后一个结点
+        while (p.next != null){
+            p = p.next;
+        }
+        node.next = null;
+        p.next = node;
     }
 
     @Override
     public void insert(int index, Object o) {
+        int i = 0;
+        Node p = head;
 
+        // 检索index是否超出范围
+        if (index <= i || p == null){
+            System.out.println("超出范围");
+            return;
+        }
+
+        // 找到位置
+        while (i != index){
+            p=p.next;
+            i++;
+        }
+        Node node = new Node(o);
+        node.next = p.next;
+        p.next = node;
     }
 
     @Override
-    public int indxeOf(Object o) {
+    public int indexOf(Object o) {
         return 0;
     }
 
