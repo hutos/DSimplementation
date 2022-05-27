@@ -76,6 +76,10 @@ public class LinkedList implements ILinkedList{
         head.next = node;
     }
 
+    /**
+     * 尾插法新增结点
+     * @param o 数据
+     */
     @Override
     public void addTail(Object o) {
         Node node = new Node(o);
@@ -88,6 +92,11 @@ public class LinkedList implements ILinkedList{
         p.next = node;
     }
 
+    /**
+     * 在index位置插入结点（中）
+     * @param index 第i个位置
+     * @param o 数据
+     */
     @Override
     public void insert(int index, Object o) {
         int i = 0;
@@ -110,12 +119,33 @@ public class LinkedList implements ILinkedList{
     }
 
     @Override
+    public void remove(int index) {
+
+    }
+
+    /**
+     * 查找对应元素下标
+     *
+     * @param o 数据
+     */
+    @Override
     public int indexOf(Object o) {
-        return 0;
+        int index = 1;
+        Node p = head.next;
+        while (p.data != o || p.next != null){
+            p=p.next;
+            index ++;
+        }
+        return index;
     }
 
     @Override
     public void display() {
-
+        Node p = head.next;
+        while (p != null) {
+            System.out.print(p.toString());
+            p = p.next;
+        }
+        System.out.println("\n");
     }
 }

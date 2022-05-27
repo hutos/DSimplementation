@@ -48,6 +48,12 @@ public interface ILinkedList {
     public void insert(int index,Object o);
 
     /**
+     * 删除index位置结点（中）
+     * @param index 第i个位置
+     */
+    public void remove(int index);
+
+    /**
      * 查找对应元素下标
      * @param o 数据
      */
