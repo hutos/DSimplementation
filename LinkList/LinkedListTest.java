@@ -17,6 +17,8 @@ public class LinkedListTest {
         list.addTail(3);
         list.addTail(4);
         list.display();
+        list.remove(5);
+        list.display();
 
         System.out.println("判空：");
         if(list.isEmpty())

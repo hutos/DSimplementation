@@ -120,6 +120,24 @@ public class LinkedList implements ILinkedList{
 
     @Override
     public void remove(int index) {
+        int i = 0;
+        Node p = head;
+        if (index < 0 || p == null || index > this.length()){
+            System.out.println("超出范围");
+            return;
+        }
+        // 找位置，单链表删除需要知道删除结点的前一个结点的指针
+        while ((i+1) != index){
+            p=p.next;
+            i++;
+        }
+        // 结点是否在链表的尾部
+        if (p.next.next == null){
+            p.next = null;
+            return;
+        }else {
+            p.next=p.next.next;
+        }
 
     }
 
