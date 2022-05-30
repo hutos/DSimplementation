@@ -35,18 +35,18 @@ public interface IDoubleLinkList {
     /**
      * 头删
      */
-    public int removeHead();
+    public void removeHead();
 
     /**
      * 尾删
      */
-    public int removeTail();
+    public void removeTail();
 
     /**
      * 插入结点
      * @param index 索引下标
      */
-    public int remove(int index);
+    public void remove(int index);
 
     /**
      * 获取第index个位置的值

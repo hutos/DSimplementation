@@ -28,6 +28,21 @@ public class DoubleLinkedListTest {
         doubleLinkedList.insert(2,20);
         doubleLinkedList.display();
 
+        System.out.println("头删法删除结点");
+        doubleLinkedList.removeHead();
+        doubleLinkedList.display();
 
+        System.out.println("尾删法删除结点");
+        doubleLinkedList.removeTail();
+        doubleLinkedList.display();
+
+        System.out.println("删除第2个位置的结点");
+        doubleLinkedList.remove(2);
+        doubleLinkedList.display();
+
+        System.out.println("========我是分割线========");
+        System.out.println(doubleLinkedList.isEmpty());
+        doubleLinkedList.clear();
+        System.out.println(doubleLinkedList.isEmpty());
     }
 }

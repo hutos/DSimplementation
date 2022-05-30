@@ -104,25 +104,42 @@ public class DoubleLinkedList implements IDoubleLinkList{
      * 头删
      */
     @Override
-    public int removeHead() {
-        return 0;
+    public void removeHead() {
+        // 删除结点的下一个结点的指针域指向头结点
+        head.next.next.prev = head;
+        // 头指针的next域指向下一个结点
+        head.next = head.next.next;
     }
 
     /**
      * 尾删
      */
     @Override
-    public int removeTail() {
-        return 0;
+    public void removeTail() {
+        // 找到尾结点之前的结点
+        Node2 goal = head.prev.prev;
+        goal.next = head;
+        head.prev = goal;
     }
 
     /**
-     * 插入结点
+     * 根据下标删除结点
      * @param index 索引下标
      */
     @Override
-    public int remove(int index) {
-        return 0;
+    public void remove(int index) {
+        int i = 0;
+        Node2 p = head;
+        if (index <= 0){
+            System.out.println("超出范围");
+        }
+        // 找前一个位置
+        while (i != index-1 && p != null){
+            i++;
+            p = p.next;
+        }
+        p.next.next.prev = p;
+        p.next = p.next.next;
     }
 
     /**
