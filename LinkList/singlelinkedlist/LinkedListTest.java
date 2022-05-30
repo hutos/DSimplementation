@@ -1,4 +1,4 @@
-package com.pekopeko.LinkList.single;
+package com.pekopeko.LinkList.singlelinkedlist;
 
 /**
  * @author lustras
@@ -39,5 +39,8 @@ public class LinkedListTest {
 
         System.out.println("元素的位置：");
         System.out.println("\t" + list.indexOf(3));
+
+        System.out.println("===========================");
+        System.out.println(list.get(0));
     }
 }

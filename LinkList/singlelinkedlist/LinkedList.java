@@ -1,4 +1,4 @@
-package com.pekopeko.LinkList.single;
+package com.pekopeko.LinkList.singlelinkedlist;
 
 /**
  * @author lustras
@@ -52,15 +52,25 @@ public class LinkedList implements ILinkedList{
     @Override
     public Object get(int i) {
         Node p = head;
-        int index = 0;
         // 不存在
-        if (index > i || p == null){
-            System.out.println("不存在");
-        }
-        // 存在
-        while (i > index && p != null){
-            p = p.next;
-            index ++;
+        try {
+            int index = 0;
+            if (index >= i){
+                throw new IndexOutOfBoundsException();
+            }else if (p == null){
+                throw new NullPointerException();
+            }
+            // 存在
+            while (i > index && p != null){
+                p = p.next;
+                index ++;
+            }
+        } catch (NullPointerException ne){
+            ne.printStackTrace();
+            System.out.println("空链表");
+        } catch (IndexOutOfBoundsException ie){
+            ie.printStackTrace();
+            System.out.println("索引超出范围");
         }
         return p.data;
     }
