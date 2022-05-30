@@ -1,4 +1,4 @@
-package com.pekopeko.LinkList;
+package com.pekopeko.LinkList.single;
 
 /**
  * @author lustras

@@ -1,4 +1,4 @@
-package com.pekopeko.LinkList;
+package com.pekopeko.LinkList.single;
 
 /**
  * @author lustras
@@ -99,11 +99,11 @@ public class LinkedList implements ILinkedList{
      */
     @Override
     public void insert(int index, Object o) {
-        int i = 0;
+        int i = 1;
         Node p = head;
 
         // 检索index是否超出范围
-        if (index <= i || p == null){
+        if (index < i || p == null){
             System.out.println("超出范围");
             return;
         }
@@ -118,6 +118,10 @@ public class LinkedList implements ILinkedList{
         p.next = node;
     }
 
+    /**
+     * 删除index位置结点（中）
+     * @param index 第i个位置
+     */
     @Override
     public void remove(int index) {
         int i = 0;
@@ -157,6 +161,9 @@ public class LinkedList implements ILinkedList{
         return index;
     }
 
+    /**
+     * 输出所有元素
+     */
     @Override
     public void display() {
         Node p = head.next;
