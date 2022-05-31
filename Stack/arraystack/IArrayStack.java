@@ -3,9 +3,8 @@ package com.pekopeko.Stack.arraystack;
 /**
  * @author lustras
  * @version 1.0
- * @File com.
  * @CreateDate 2022/5/319:10
- * @Description <p></p>
+ * @Description <p>数组栈接口</p>
  */
 public interface IArrayStack {
     /**

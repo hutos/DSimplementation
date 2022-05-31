@@ -3,9 +3,8 @@ package com.pekopeko.LinkList.doublelinkedlist;
 /**
  * @author lustras
  * @version 1.0
- * @File com.
  * @CreateDate 2022/5/3014:46
- * @Description <p></p>
+ * @Description <p>双向循环链表</p>
  */
 public class DoubleLinkedList implements IDoubleLinkList{
     // 头结点

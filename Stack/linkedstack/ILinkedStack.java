@@ -3,9 +3,8 @@ package com.pekopeko.Stack.linkedstack;
 /**
  * @author lustras
  * @version 1.0
- * @File com.
  * @CreateDate 2022/5/3110:20
- * @Description <p></p>
+ * @Description <p>链栈接口</p>
  */
 public interface ILinkedStack {
     /**

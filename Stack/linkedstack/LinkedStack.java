@@ -5,7 +5,7 @@ package com.pekopeko.Stack.linkedstack;
  * @version 1.0
  * @File com.
  * @CreateDate 2022/5/3110:20
- * @Description <p></p>
+ * @Description <p>链栈</p>
  */
 public class LinkedStack implements ILinkedStack{
     private Node head;

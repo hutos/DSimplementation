@@ -5,7 +5,7 @@ package com.pekopeko.Stack.linkedstack;
  * @version 1.0
  * @File com.
  * @CreateDate 2022/5/3110:17
- * @Description <p></p>
+ * @Description <p>结点类型</p>
  */
 public class Node {
     public Object data;

@@ -3,9 +3,8 @@ package com.pekopeko.Stack.arraystack;
 /**
  * @author lustras
  * @version 1.0
- * @File com.
  * @CreateDate 2022/5/319:08
- * @Description <p></p>
+ * @Description <p>数组栈</p>
  */
 public class ArrayStack implements IArrayStack{
     int cur;

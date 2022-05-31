@@ -5,7 +5,7 @@ package com.pekopeko.Stack.linkedstack;
  * @version 1.0
  * @File com.
  * @CreateDate 2022/5/3110:34
- * @Description <p></p>
+ * @Description <p>链栈测试类</p>
  */
 public class LinkedStackTest {
     public static void main(String[] args) {
