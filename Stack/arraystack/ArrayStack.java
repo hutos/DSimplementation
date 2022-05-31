@@ -59,4 +59,5 @@ public class ArrayStack implements IArrayStack{
             return false;
         }
     }
+
 }

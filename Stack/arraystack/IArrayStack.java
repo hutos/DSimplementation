@@ -27,4 +27,5 @@ public interface IArrayStack {
      * 判断栈是否为空
      */
     public boolean isEmpty();
+
 }

@@ -25,4 +25,5 @@ public class ArrayStackTest {
         arrayStack.push("ushio");
         arrayStack.display();
     }
+
 }
