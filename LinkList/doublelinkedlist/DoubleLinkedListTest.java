@@ -44,5 +44,9 @@ public class DoubleLinkedListTest {
         System.out.println(doubleLinkedList.isEmpty());
         doubleLinkedList.clear();
         System.out.println(doubleLinkedList.isEmpty());
+
+        System.out.println();
+        System.out.println("========我是分割线========");
+        doubleLinkedList.get(0);
     }
 }

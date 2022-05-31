@@ -53,25 +53,18 @@ public class LinkedList implements ILinkedList{
     public Object get(int i) {
         Node p = head;
         // 不存在
-        try {
-            int index = 0;
-            if (index >= i){
-                throw new IndexOutOfBoundsException();
-            }else if (p == null){
-                throw new NullPointerException();
-            }
-            // 存在
-            while (i > index && p != null){
-                p = p.next;
-                index ++;
-            }
-        } catch (NullPointerException ne){
-            ne.printStackTrace();
-            System.out.println("空链表");
-        } catch (IndexOutOfBoundsException ie){
-            ie.printStackTrace();
-            System.out.println("索引超出范围");
+        int index = 0;
+        if (index >= i){
+            throw new IndexOutOfBoundsException("索引超出范围");
+        }else if (p == null){
+            throw new NullPointerException("空链表");
         }
+        // 存在
+        while (i > index && p != null){
+            p = p.next;
+            index ++;
+        }
+
         return p.data;
     }
 
@@ -114,8 +107,7 @@ public class LinkedList implements ILinkedList{
 
         // 检索index是否超出范围
         if (index < i || p == null){
-            System.out.println("超出范围");
-            return;
+            throw new NullPointerException("超出范围");
         }
 
         // 找到位置
@@ -137,8 +129,7 @@ public class LinkedList implements ILinkedList{
         int i = 0;
         Node p = head;
         if (index < 0 || p == null || index > this.length()){
-            System.out.println("超出范围");
-            return;
+            throw new NullPointerException("索引超出范围");
         }
         // 找位置，单链表删除需要知道删除结点的前一个结点的指针
         while ((i+1) != index){

@@ -48,7 +48,7 @@ public class DoubleLinkedList implements IDoubleLinkList{
     public void insert(int index, Object o) {
         int i = 0;
         if (index <= i){
-            System.out.println("超出范围");
+            throw new IndexOutOfBoundsException("超出范围");
         }
         // 让一个新指针指向头结点（在第index个位置插入的话，需要找到index-1的位置）
         Node2 p = head;
@@ -130,7 +130,7 @@ public class DoubleLinkedList implements IDoubleLinkList{
         int i = 0;
         Node2 p = head;
         if (index <= 0){
-            System.out.println("超出范围");
+            throw new IndexOutOfBoundsException("超出范围");
         }
         // 找前一个位置
         while (i != index-1 && p != null){
@@ -151,28 +151,21 @@ public class DoubleLinkedList implements IDoubleLinkList{
         Node2 p = head;
 
         // 检查index是否超限
-        try {
-            if (i > index || index == 0){
-                throw new IndexOutOfBoundsException();
-            }else if (p == null){
-                throw new NullPointerException();
-            }
-            // 存在
-            while (index > i && p != null){
-                p = p.next;
-                i++;
-            }
-            // 找完一遍都不存在
-            if (p.data == null){
-                throw new IndexOutOfBoundsException();
-            }
-        } catch (NullPointerException ne){
-            ne.printStackTrace();
-            System.out.println("空链表");
-        } catch (IndexOutOfBoundsException ie){
-            ie.printStackTrace();
-            System.out.println("索引超出范围或者不存在");
+        if (i > index || index == 0){
+            throw new IndexOutOfBoundsException("索引超出范围或者不存在");
+        }else if (p == null){
+            throw new NullPointerException("空链表");
         }
+        // 存在
+        while (index > i && p != null){
+            p = p.next;
+            i++;
+        }
+        // 找完一遍都不存在
+        if (p.data == null){
+            throw new IndexOutOfBoundsException("未找到数据");
+        }
+
         return p.data;
     }
 
