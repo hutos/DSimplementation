@@ -52,4 +52,5 @@ public class LinkedStack implements ILinkedStack{
         head.next = null;
         return;
     }
+
 }

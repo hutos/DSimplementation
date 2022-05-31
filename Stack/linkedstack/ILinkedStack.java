@@ -32,4 +32,5 @@ public interface ILinkedStack {
      * 清空栈
      */
     public void clear();
+
 }

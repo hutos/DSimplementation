@@ -30,4 +30,5 @@ public class LinkedStackTest {
         System.out.println("清空后判断栈是否为空");
         System.out.println(linkedStack.isEmpty());
     }
+
 }
