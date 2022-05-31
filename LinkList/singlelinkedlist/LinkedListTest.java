@@ -43,4 +43,5 @@ public class LinkedListTest {
         System.out.println("===========================");
         System.out.println(list.get(0));
     }
+
 }

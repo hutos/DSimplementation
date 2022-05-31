@@ -63,4 +63,5 @@ public interface ILinkedList {
      * 输出所有元素
      */
     public void display();
+
 }
