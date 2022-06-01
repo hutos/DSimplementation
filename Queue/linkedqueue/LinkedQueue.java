@@ -36,8 +36,17 @@ public class LinkedQueue implements ILinkedQueue{
     }
 
     @Override
-    public void isEmpty() {
+    public boolean isEmpty() {
+        if (head.next == null){
+            return true;
+        }else {
+            return false;
+        }
+    }
 
+    @Override
+    public void clear() {
+        head.next = null;
     }
 
     @Override

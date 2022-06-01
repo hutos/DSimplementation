@@ -19,5 +19,10 @@ public class LinkedQueueTest {
         System.out.println("出队");
         linkedQueue.dequeue();
         linkedQueue.display();
+        System.out.println("==========我是分割线==========");
+        System.out.println(linkedQueue.isEmpty());
+        linkedQueue.clear();
+        System.out.println(linkedQueue.isEmpty());
+
     }
 }

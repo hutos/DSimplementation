@@ -21,7 +21,12 @@ public interface ILinkedQueue {
     /**
      * 判空
      */
-    public void isEmpty();
+    public boolean isEmpty();
+
+    /**
+     * 清空
+     */
+    public void clear();
 
     /**
      * 打印队列
