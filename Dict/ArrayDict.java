@@ -1,6 +1,7 @@
 package com.pekopeko.Dict;
 
 import java.util.Iterator;
+import java.util.Map;
 
 /**
  * @author lustras
@@ -9,7 +10,12 @@ import java.util.Iterator;
  * @Description <p>字典数组</p></p>
  */
 public class ArrayDict<K,V> implements DictInterface<K,V > {
+    private Map.Entry<K,V>[] dictionary;
+    private int numberOfEntries;
+    private final static int DEFAULT_CAPACITY = 10; // 初始容量
+    private final static int MAX_CAPACITY = 20000;
 
+    
 
     @Override
     public void add(K key, V value) {
